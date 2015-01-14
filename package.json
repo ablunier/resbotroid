@@ -1,0 +1,31 @@
+{
+  "name": "resbotroid",
+  "version": "0.0.0",
+  "description": "Resources automation tool for Android",
+  "bin": {
+    "resbotroid": "./bin/resbotroid.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ablunier/resbotroid"
+  },
+  "keywords": [
+    "resources",
+    "android",
+    "automation",
+    "resize",
+    "optimize"
+  ],
+  "author": "Adrian P. Blunier <adrian@blunier.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ablunier/resbotroid/issues"
+  },
+  "dependencies": {
+    "commander": "~2.6.0",
+    "inquirer": "~0.8.0"
+  }
+}
