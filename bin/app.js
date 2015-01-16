@@ -1,13 +1,16 @@
 #!/usr/bin/env node
 
 var program = require('commander');
+var inquirer = require('inquirer');
 
-var config = require('./config');
+var resbotroid = require('./src');
 
 var pkg = require('../package.json');
+var config = require('./config');
 
 program.version(pkg.version);
 
+// Do the stuff
 program
     .command('exec [<config>]')
     .description('Executes resbotroid')
@@ -21,8 +24,15 @@ program
     .command('init [<config>]')
     .description('Initiates a new configuration file')
     .action(function (file, command) {
-        config.generate(null, function (config, file) {
-            console.log('file');
+        console.log('init...');
+        
+        var setup = new resbotroid.Setup(config, inquirer);
+        setup.setCurrentConfig(null);
+        
+        setup.generateConfig(function (config, file) {
+            console.log('config generated');
+            
+            console.log('init finished');
         });
     });
 

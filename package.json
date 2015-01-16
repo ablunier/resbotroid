@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Resources automation tool for Android",
   "bin": {
-    "resbotroid": "./bin/resbotroid.js"
+    "resbotroid": "./bin/app.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -27,5 +27,8 @@
   "dependencies": {
     "commander": "~2.6.0",
     "inquirer": "~0.8.0"
+  },
+  "devDependencies": {
+    "mocha": "~2.1.0"
   }
 }
